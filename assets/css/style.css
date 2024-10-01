@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Desplazamiento suave */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #E0F0FA;
+    /* Fondo azul muy claro */
+    color: #2A4D69;
+    /* Texto azul oscuro para mayor legibilidad */
+}
+
+/* Estilo general del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #79A9D1;
+    /* Azul intermedio para la barra de navegación */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo img {
+    height: 70px;
+}
+
+/* Estilos de la navbar */
+.navbar {
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background: #A7C5E0;
+    /* Azul suave para el fondo */
+    top: 80px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s ease;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 30px 0;
+    line-height: 30px;
+
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #2A4D69;
+    /* Texto en azul oscuro */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background: none;
+    color: #5587A2;
+    /* Azul medio al hacer hover */
+}
+
+/* Botón hamburguesa */
+.checkbtn {
+    display: block;
+    font-size: 30px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+/* Secciones generales */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+#inicio {
+    background-color: #C2DDF2;
+    /* Azul claro */
+    color: #2A4D69;
+    /* Texto en azul oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.inicio-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.inic {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 150px;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.imagen-inicio {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    margin-left: 200px;
+    padding: 0;
+}
+
+.caracteristica img {
+    width: 100px;
+    height: 400px;
+}
+
+#optimiza .separacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#optimiza img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.septext {
+    max-width: 60%;
+    text-align: left;
+}
+
+#optimiza,
+#caracteristicas,
+#lo-que-hacemos-mejor,
+#tecnica,
+#preferencia,
+#soluciones-opticas,
+#comentarios,
+#contacto {
+    background-color: #E3EFF9;
+    /* Azul muy claro para las demás secciones */
+    color: #2A4D69;
+    /* Texto en azul oscuro */
+    margin-top: 80px;
+}
+
+.mejor-contenedor,
+.inicio-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tecnica {
+    padding: 20px;
+    background-color: #E3EFF9;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ct {
+    background-color: #FFFFFF;
+    border: 1px solid #C0D6E8;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ct:hover {
+    transform: scale(1.05);
+    /* Aumenta el tamaño en un 5% al pasar el cursor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Aumenta la sombra para dar un efecto de profundidad */
+}
+
+
+.imagen-mejor {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+section a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #75A3C4;
+    /* Azul intermedio para botones */
+    color: #FFFFFF;
+    /* Texto en blanco */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 20px;
+}
+
+section a:hover {
+    background-color: #5587A2;
+    /* Azul medio al pasar el ratón */
+    color: #FFFFFF;
+}
+
+blockquote {
+    background-color: #E3EFF9;
+    padding: 20px;
+    border-left: 5px solid #79A9D1;
+    margin: 30px auto;
+    width: 80%;
+    font-size: 1.1em;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2A4D69;
+}
+
+.stars {
+    font-size: 24px;
+    margin: 0 3px;
+    color: #fac97b;
+}
+
+footer {
+    background-color: #79A9D1;
+    color: #FFFFFF;
+    /* Texto en blanco */
+    padding: 25px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.resena {
+    display: flex;
+}
+
+.resena img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 100px;
+}
+
+.caracteristica,
+.preferencias-card,
+.soluciones-card {
+    background-color: #FFFFFF;
+    border: 1px solid #C0D6E8;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.caracteristica img,
+.soluciones-card img {
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.preferencias-card img {
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 1040px) {
+    #inicio {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .inicio-contenedor {
+        flex-direction: column;
+    }
+
+    .imagen-inicio {
+        margin-top: 70px;
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        height: auto;
+        order: -1;
+        /* Coloca la imagen antes del texto */
+    }
+
+    .inic {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 10px;
+        font-size: 0.7em;
+        /* Ajustar el tamaño de la fuente */
+    }
+
+ 
+
+}
+
+/* Dispositivos móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+
+    /* Reducir el tamaño de la letra en pantallas pequeñas */
+    body {
+        font-size: 14px;
+    }
+
+    /* Ajustar la sección de inicio para que la imagen esté arriba del texto */
+    #inicio {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .inicio-contenedor {
+        flex-direction: column;
+    }
+
+    /* Imagen de inicio ocupando todo el ancho en la parte superior */
+    .imagen-inicio {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+        height: auto;
+        order: -1;
+        /* Coloca la imagen antes del texto */
+    }
+
+    /* Ajustar el tamaño del texto en la sección de inicio */
+    .inic {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        /* Ajustar el tamaño de la fuente */
+    }
+
+    #optimiza .separacion .septext {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .mejor-contenedor {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    blockquote {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .stars {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .resena img {
+        width: 100px;
+        height: 100px;
+        justify-content: center;
+        margin: 10px;
+
+    }
+
+    /* Reducir el tamaño de los botones en la sección de inicio */
+    section a {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .navbar ul li a {
+        font-size: 10px;
+        text-decoration: none;
+        color: #2A4D69;
+        /* Texto en azul oscuro */
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    #soluciones h1,
+    p {
+        font-size: 0.9em;
+    }
+
+}
